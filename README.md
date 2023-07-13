@@ -1,23 +1,21 @@
-# terraform-basics
-
-# terraform-basics
+terraform-basics
 In this repository, we are going to place all the needed bascis that are needed to kick start our Terraform Provisioning Capabilites.
 
 Most of the information in terraform should be referred from terraform registry only :
 
     https://registry.terraform.io/?
-# Important Terminolog In Terraform
+Important Terminology In Terraform
 
-    1) Arguments
-    2) Attributes
+    1) Arguments     : Properties of the resource as apart of the resource creation
+    2) Attributes    : Properties of the resource which can be only after the resource creation.
     3) Providers
     4) Modules
-# Common Terraform Commands
+Common Terraform Commands
     $ terraform init 
     $ terraform plan
     $ terraform apply -auto-approve 
 
-# If you want to supply any values of the variable from the command line.
+If you want to supply any values of the variable from the command line.
 
 
     $ terraform plan -var VARNAME=value
@@ -31,6 +29,14 @@ If you want to supply any values of the variable from the anyother file apart fr
 
 precedence
     When compared to the values of the variables declared in terraform.tfvars, command line variables will have higher precendence
+
+    -var / -var-file   >  terraform.auto.tfvars  > terraformtfvars > shell variables
+Shell Based Variables :
+    These are the variables with least priority and this can be supplied by shell using export.
+
+        $ export TF_VAR_varName=value 
+    
+    This is how we can supply the shell based variables
 In this training, we would be using the latest version of terraform v1.5.2 ( 10/July/2023 )
 
 Terraform supports more 3,339 cloud providers and this keep on growing and this is the major reason why manority of the companies prefer to create infrastucture using terraform.
