@@ -1,37 +1,37 @@
-terraform-basics
+# terraform-basics
 In this repository, we are going to place all the needed bascis that are needed to kick start our Terraform Provisioning Capabilites.
 
 Most of the information in terraform should be referred from terraform registry only :
 
     https://registry.terraform.io/?
-Important Terminology In Terraform
+# Important Terminology In Terraform
 
     1) Arguments     : Properties of the resource as apart of the resource creation
     2) Attributes    : Properties of the resource which can be only after the resource creation.
     3) Providers
     4) Modules
-Common Terraform Commands
+# Common Terraform Commands
     $ terraform init 
     $ terraform plan
     $ terraform apply -auto-approve 
 
-If you want to supply any values of the variable from the command line.
+# If you want to supply any values of the variable from the command line.
 
 
     $ terraform plan -var VARNAME=value
     $ terraform apply -auto-approve -var VARNAME=value
 
-If you want to supply any values of the variable from the anyother file apart from terraform.tfvars, you need to explicity pass the varaible file name to be used .
+# If you want to supply any values of the variable from the anyother file apart from terraform.tfvars, you need to explicity pass the varaible file name to be used .
 
 
     $ terraform plan -var-file=dev.tfvars
     $ terraform apply -auto-approve -var-file=dev.tfvars
 
-precedence
+# precedence
     When compared to the values of the variables declared in terraform.tfvars, command line variables will have higher precendence
 
     -var / -var-file   >  terraform.auto.tfvars  > terraformtfvars > shell variables
-Shell Based Variables :
+# Shell Based Variables :
     These are the variables with least priority and this can be supplied by shell using export.
 
         $ export TF_VAR_varName=value 
