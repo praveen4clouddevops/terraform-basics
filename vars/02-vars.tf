@@ -38,5 +38,5 @@ variable "map_variable"{
     }
 }
 output "example-map-op"{
-    value = "our training is ${var.map_variable{"Training"}} and this is our ${var.map_variable{"Batch"}} and it is ${var.map_variable{"mode"}}"
+    value = "our training is ${var.map_variable["Training"]} and this is our ${var.map_variable["Batch"]} and it is ${var.map_variable["mode"]}"
 }
