@@ -17,7 +17,9 @@ resource "aws_instance" "app_server" {
     Name = "TerraformServer"
   }
 }
-
+output "private_ip_address" {
+  value = aws_instance.app_server.private_ip
+}
 
 
 # Creates a Security Group
